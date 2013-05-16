@@ -1,0 +1,39 @@
+My suggestion if you are using msysgit client, set git executable for cmd in path of enviroment.
+Set System Variable:GIT_HOME=C:\msysgit\msysgit
+Add to end of Path:;%GIT_HOME%\cmd
+// Verify that git client in Path set right
+Open Command prompt and enter "git"
+git will print help for all git commands. If not, set correct GIT_HOME and add it in Path
+
+// First you need to tell git your name, so that it can properly label the commits you make.
+git config --global user.name "Valeriy Garnitskiy"
+
+// Git saves your email address into the commits you make. We use the email address to associate your commits with your GitHub account.
+git config --global user.email "releng@emc.com"
+
+C:\Users\garniv>mkdir .ssh
+
+ // Use default value except .ssh\id_rsa => hit enter key
+C:\Users\garniv>c:\msysgit\msysgit\bin\ssh-keygen.exe -t rsa -C "releng@emc.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (//.ssh/id_rsa): .ssh\id_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in .ssh\id_rsa.
+Your public key has been saved in .ssh\id_rsa.pub.
+The key fingerprint is:
+d5:9f:05:8b:4e:30:21:1f:ec:f1:e4:5c:7e:99:05:5f releng@emc.com
+
+C:\Users\garniv>clip < C:\Users\garniv\.ssh\id_rsa.pub
+
+Go to your GitHub Account Settings
+Click "SSH Keys" in the left sidebar
+Click "Add SSH key"
+Name it in Title. for example "releng@USSAGARNIVL1C"
+Paste your key into the "Key" field
+Click "Add key"
+Confirm the action by entering your GitHub password
+
+
+
+
