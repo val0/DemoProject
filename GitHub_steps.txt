@@ -35,5 +35,8 @@ Click "Add key"
 Confirm the action by entering your GitHub password
 
 
+C:\Users\garniv>mkdir .ssh
+
+
 
 
