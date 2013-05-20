@@ -5,9 +5,6 @@ Add to end of Path:;%GIT_HOME%\cmd
 Open Command prompt and enter "git"
 git will print help for all git commands. If not, set correct GIT_HOME and add it in Path
 
-//
-//
-
 // First you need to tell git your name, so that it can properly label the commits you make.
 git config --global user.name "Valeriy Garnitskiy"
 
