@@ -13,6 +13,10 @@ git config --global user.email "releng@emc.com"
 
 C:\Users\garniv>mkdir .ssh
 
+//
+//
+//
+
  // Use default value except .ssh\id_rsa => hit enter key
 C:\Users\garniv>c:\msysgit\msysgit\bin\ssh-keygen.exe -t rsa -C "releng@emc.com"
 Generating public/private rsa key pair.
